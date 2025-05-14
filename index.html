@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinoadois.sex</title>
+  <link rel="stylesheet" href="stylefofo.css">
+  <style>
+  
+  </style>
+</head>
+<body>
+
+  <div class="coracoes-container">
+    <div class="coracao-wrapper"><div class="coracao"></div></div>
+    <div class="coracao-wrapper"><div class="coracao"></div></div>
+    <div class="coracao-wrapper"><div class="coracao"></div></div>
+    <div class="coracao-wrapper"><div class="coracao"></div></div>
+    <div class="coracao-wrapper"><div class="coracao"></div></div>
+  </div>  
+
+  <div class="coracoes-caindo-container">
+    <div class="coracao-caindo-wrapper"><div class="coracao-caindo"></div></div>
+    <div class="coracao-caindo-wrapper"><div class="coracao-caindo"></div></div>
+    <div class="coracao-caindo-wrapper"><div class="coracao-caindo"></div></div>
+    <div class="coracao-caindo-wrapper"><div class="coracao-caindo"></div></div>
+    <div class="coracao-caindo-wrapper"><div class="coracao-caindo"></div></div>
+  </div>
+
+  <header>
+    <h1>Судьба на двоих(Destino a dois)</h1>
+    <p>Uma história de amor única e inesquecível.</p>
+  </header>
+
+  <main>
+    <section class="relacionamento">
+      <h2>Nosso Relacionamento</h2>
+      <p>Estamos juntos desde <span id="data">12/06/2024</span>.</p>
+      <p>Contagem de dias: <span id="contador">0</span></p>
+      <button onclick="atualizarContagem()">Atualizar Contagem</button>
+    </section>
+
+    <section class="galeria">
+      <h2>Nossas Fotos</h2>
+      <audio id="musica" loop>
+        <source src="French Accordion Music.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+      
+      <button onclick="toggleMusica()">🎵 Tocar / Pausar Música</button>  
+      <div class="fotos">
+        <img src="pictures/Fotos polaroid/IMG-20250427-WA0068~2.jpg" alt="Foto 1">
+        <img src="pictures/Fotos polaroid/Screenshot_20241104-065029.png" alt="Foto 2">
+        <img src="pictures/Fotos polaroid/IMG-20250427-WA0074.jpg" alt="Foto 3">
+      </div>    
+    </section>
+
+    <section class="mensagem">
+      <h2>Mensagem Especial</h2>
+      <p>“Eu prometo a tudo o que me é caro, a tudo em que acredito, eu prometo que como te amo, nunca me aconteceu amar, com tal carinho – até as lágrimas- e com tal sentimento de fascinação. (...) E eu quero mais que tido que você seja feliz, e me parece que eu poderia lhe dar esta felicidade – felicidade solar, simples – e nada costumeira.
+
+        (...) Eu te amo, eu te quero, você me é insuportavelmente necessária... Seus olhos - que de maneira tão admirável irradiam -,  seus olhos, sua voz, lábios, seus ombros são tão leves, tão ensolarados...”
+        
+        - Nabôkov </p>
+    </section>
+
+  
+    <section class="frases-romanticas">
+      <h2>Frases de Amor</h2>
+      <div class="interactive-buttons">
+        <button id="Love-button" class="btn btn-large">Mostrar frases romanticas</button>
+    </div>
+    <div id="Love-container" class="Love-container"></div>
+    <script src="scrrr.js"></script>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Destino a dois. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function atualizarContagem() {
+      const dataInicio = new Date("2024-06-12");
+      const hoje = new Date();
+      const diffTime = Math.abs(hoje - dataInicio);
+      const dias = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      document.getElementById("contador").textContent = dias;
+    }
+  </script>
+
+  <script>
+    const musica = document.getElementById('musica');
+    let tocando = false;
+
+    function toggleMusica() {
+      tocando ? musica.pause() : musica.play();
+      tocando = !tocando;
+    }
+    </script>
+
+</body>
+</html>
