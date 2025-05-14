@@ -74,6 +74,15 @@ section p {
   border: 2px solid #ff66b2;
 }
 
+.galeria img2 {
+  width: 450px;
+  height: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ff66b2;
+  border: 2px solid #ff66b2;
+}
+
+
 /* Botões */
 button {
   background-color: #ff66b2;

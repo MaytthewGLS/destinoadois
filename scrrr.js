@@ -6,10 +6,10 @@ const Love = [
     "“Amar não é olhar um para o outro, é olhar juntos na mesma direção.” — Antoine de Saint-Exupéry",
     "“Com o amor consegue-se viver mesmo sem fellicidade.” - Fiódor Dostoiévski",
     "“A cada dia, em cada momento, eu me apaixono ainda mais por você.” — Anônimo",
-    "Mr. Bean tentou aprender a nadar. Agora ele só toma banho com guarda-chuva.",
-    "Qual é a comida favorita do Mr. Bean? Feijão, é claro!",
-    "Mr. Bean foi à escola de arte. Sua obra-prima? Um triângulo com olhos.",
-    "Por que o Mr. Bean nunca joga xadrez? Porque ele não consegue decidir qual peça é o ursinho Teddy."
+    "“Eu te amo com um amor que é mais que amor.” — Edgar Allan Poe",
+    "“Se você sabe explicar o que sente, não ama, pois o amor foge de todas as explicações possíveis. — Carlos Drummond de Andrade”",
+    "“Amar é encontrar na felicidade de outrem a própria felicidade.” — Gottfried Leibniz",
+    "Amar é tão curto, e esquecer é tão longo.” — Pablo Neruda"
 ];
 
 LoveButton.addEventListener('click', function() {
@@ -20,5 +20,5 @@ LoveButton.addEventListener('click', function() {
     
     setTimeout(() => {
         LoveContainer.style.display = 'none';
-    }, 9000);
+    }, 50000);
 });
