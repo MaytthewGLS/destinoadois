@@ -13,8 +13,8 @@ const Love = [
 ];
 
 LoveButton.addEventListener('click', function() {
-    const randomJoke = Love[Math.floor(Math.random() * Love.length)];
-    LoveContainer.textContent = randomJoke;
+    const randomlove = Love[Math.floor(Math.random() * Love.length)];
+    LoveContainer.textContent = randomlove;
     LoveContainer.style.display = 'block';
     
     
@@ -22,3 +22,37 @@ LoveButton.addEventListener('click', function() {
         LoveContainer.style.display = 'none';
     }, 50000);
 });
+
+function alternarModo() {
+    // Alterna a classe 'modo-noite' no elemento <body>
+    document.body.classList.toggle('modo-noite');
+    
+    // Mudar o texto do botão conforme o modo
+    const botaoModo = document.getElementById('modo-noite');
+    if (document.body.classList.contains('modo-noite')) {
+      botaoModo.textContent = '🌞 Modo Claro';
+    } else {
+      botaoModo.textContent = '🌙 Modo Noite de Encontro';
+    }
+  }
+
+  function alternarModo() {
+    // Alterna a classe 'modo-noite' no <body>
+    document.body.classList.toggle('modo-noite');
+    
+    // Mudar o texto do botão conforme o modo
+    const botaoModo = document.getElementById('modo-noite');
+    if (document.body.classList.contains('modo-noite')) {
+      botaoModo.textContent = '🌞 Modo Claro';
+      
+      // Trocar para uma música suave
+      musica.src = "soft-romantic-music.mp3"; // Altere para o arquivo de música suave
+      musica.play();
+    } else {
+      botaoModo.textContent = '🌙 Modo Noite de Encontro';
+      
+      // Trocar para a música original
+      musica.src = "French Accordion Music.mp3";
+      musica.play();
+    }
+  }
