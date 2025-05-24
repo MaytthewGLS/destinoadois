@@ -7,9 +7,9 @@ const Love = [
     "“Com o amor consegue-se viver mesmo sem fellicidade.” - Fiódor Dostoiévski",
     "“A cada dia, em cada momento, eu me apaixono ainda mais por você.” — Anônimo",
     "“Eu te amo com um amor que é mais que amor.” — Edgar Allan Poe",
-    "“Se você sabe explicar o que sente, não ama, pois o amor foge de todas as explicações possíveis. — Carlos Drummond de Andrade”",
+    "“Se você sabe explicar o que sente, não ama, pois o amor foge de todas as explicações possíveis.” — Carlos Drummond de Andrade”",
     "“Amar é encontrar na felicidade de outrem a própria felicidade.” — Gottfried Leibniz",
-    "Amar é tão curto, e esquecer é tão longo.” — Pablo Neruda"
+    "“Amar é tão curto, e esquecer é tão longo.” — Pablo Neruda"
 ];
 
 LoveButton.addEventListener('click', function() {
@@ -17,42 +17,52 @@ LoveButton.addEventListener('click', function() {
     LoveContainer.textContent = randomlove;
     LoveContainer.style.display = 'block';
     
-    
-    setTimeout(() => {
-        LoveContainer.style.display = 'none';
-    }, 50000);
+    clearTimeout(Lovetimeout)
+    loveTimeout = setTimeout(() => {
+      LoveContainer.style.display = 'none';
+  }, 5000);  
 });
-
+ 
 function alternarModo() {
-    // Alterna a classe 'modo-noite' no elemento <body>
-    document.body.classList.toggle('modo-noite');
-    
-    // Mudar o texto do botão conforme o modo
-    const botaoModo = document.getElementById('modo-noite');
-    if (document.body.classList.contains('modo-noite')) {
-      botaoModo.textContent = '🌞 Modo Claro';
-    } else {
-      botaoModo.textContent = '🌙 Modo Noite de Encontro';
-    }
+  document.body.classList.toggle('modo-noite');
+
+  const button = document.getElementById("modo-noite");
+  const lua = document.getElementById("lua");
+
+  if (document.body.classList.contains("modo-noite")) {
+    button.innerHTML = "🌞 Modo Claro de Encontro";
+    if (lua) lua.src = "pictures/Fotos polaroid/moonzada-icon.png";
+
+    // Trocar para música do modo noite
+    musica.src = "The Weeknd - Call Out My Name.mp3";  // ou qualquer música de noite
+  } else {
+    button.innerHTML = "🌙 Modo Noite de Encontro";
+    if (lua) lua.src = "pictures/Fotos polaroid/moon-icon.png";
+
+    // Voltar para música do modo claro
+    musica.src = "French Accordion Music.mp3 ";
   }
 
-  function alternarModo() {
-    // Alterna a classe 'modo-noite' no <body>
-    document.body.classList.toggle('modo-noite');
-    
-    // Mudar o texto do botão conforme o modo
-    const botaoModo = document.getElementById('modo-noite');
-    if (document.body.classList.contains('modo-noite')) {
-      botaoModo.textContent = '🌞 Modo Claro';
-      
-      // Trocar para uma música suave
-      musica.src = "soft-romantic-music.mp3"; // Altere para o arquivo de música suave
-      musica.play();
-    } else {
-      botaoModo.textContent = '🌙 Modo Noite de Encontro';
-      
-      // Trocar para a música original
-      musica.src = "French Accordion Music.mp3";
-      musica.play();
+  musica.play();
+  tocando = true;
+}
+
+
+  function baixarCarta() {
+    const conteudo = document.getElementById("carta").value;
+
+    if (!conteudo) {
+      alert("Por favor, escreva algo antes de baixar 💌");
+      return;
     }
+
+    const blob = new Blob([conteudo], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "carta-de-amor.txt"; // nome do arquivo
+    link.click();
+
+    URL.revokeObjectURL(url); // limpar memória
   }

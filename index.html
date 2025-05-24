@@ -31,6 +31,12 @@
     <h1>Destino a dois <span>❤️</span></h1>
     <p>Uma história de amor única e inesquecível.</p>
     <button id="modo-noite" onclick="alternarModo()">🌙 Modo Noite de Encontro</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="diaespecial.html">Dia Especial</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
@@ -56,6 +62,14 @@
       </div>    
     </section>
 
+<section class="cartinha-amor">
+  <h2>Escreva uma Cartinha de Amor ✍️</h2>
+  <textarea id="carta" rows="5" placeholder="Querido(a)..."></textarea>
+  <br>
+  <button onclick="baixarCarta()">💌 Baixar carta</button>
+  <p id="confirmacao"></p>
+</section>
+    
     <section class="mensagem">
       <h2>Mensagem Especial</h2>
       <p>“Eu prometo a tudo o que me é caro, a tudo em que acredito, eu prometo que como te amo, nunca me aconteceu amar, com tal carinho – até as lágrimas- e com tal sentimento de fascinação. (...) E eu quero mais que tido que você seja feliz, e me parece que eu poderia lhe dar esta felicidade – felicidade solar, simples – e nada costumeira.
@@ -80,25 +94,29 @@
     <p>&copy; 2025 Destino a dois. Todos os direitos reservados.</p>
   </footer>
 
-  <script>
-    function atualizarContagem() {
-      const dataInicio = new Date("2024-06-12");
-      const hoje = new Date();
-      const diffTime = Math.abs(hoje - dataInicio);
-      const dias = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-      document.getElementById("contador").textContent = dias;
-    }
-  </script>
+ <script>
+  const musica = document.getElementById('musica');
+  let tocando = false;
+  const musicas = [
+    "French Accordion Music.mp3",
+    "The Weeknd - Call Out My Name.mp3",
 
-  <script>
-    const musica = document.getElementById('musica');
-    let tocando = false;
+  ];
+  let indiceMusica = 0;
 
-    function toggleMusica() {
-      tocando ? musica.pause() : musica.play();
-      tocando = !tocando;
-    }
-    </script>
+  function toggleMusica() {
+    tocando ? musica.pause() : musica.play();
+    tocando = !tocando;
+  }
+
+  function trocarMusica() {
+    indiceMusica = (indiceMusica + 1) % musicas.length;
+    musica.src = musicas[indiceMusica];
+    musica.play();
+    tocando = true;
+  }
+</script>
+
 
 </body>
 </html>

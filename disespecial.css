@@ -1,0 +1,101 @@
+.button {
+    margin: 20px 0;
+}
+
+.cartao-surpresa {
+      margin-top: 30px;
+      background-color: #fff0f5;
+      border: 2px dashed #ff66b2;
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.5em;
+      color: #c2185b;
+      text-shadow: 1px 1px #ffc0cb;
+      box-shadow: 0 0 20px #ff66b2;
+      animation: aparecer 0.8s ease-in-out;
+    }
+
+    @keyframes aparecer {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .btn-surpresa {
+      background-color: #ff66b2;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.3em;
+      border-radius: 10px;
+      color: white;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-surpresa:hover {
+      background-color: #e75480;
+      box-shadow: 0 0 10px #ff99cc;
+    }
+
+    #salvar-btn {
+      margin-top: 15px;
+      background-color: #f08080;
+    }
+
+body.modo-noite {
+  background-color: rgba(39, 39, 39, 0.863)14; 
+  color: rgb(43, 14, 14); 
+}
+
+
+body.modo-noite header {
+  background: linear-gradient(to right, #2b2b2b, #ff0000); /* Gradiente mais escuro */
+    color: rgb(43, 1, 1);
+    padding: 30px 20px;
+    border-radius: 15px; /* Deixa os cantos arredondados */
+    box-shadow: 0 0 20px #3f2230; /* Adiciona uma sombra para dar profundidade */
+    text-align: center; /* Centraliza o conteúdo */
+  box-shadow: 0 0 20px #db4f61; /* Sombra suave para dar destaque */
+}
+
+body.modo-noite nav ul li a:hover {
+    background-color:rgba(128, 44, 44, 0.8);
+    box-shadow: 0 0 20px #522127;
+  }
+
+body.modo-noite section h2 {
+  font-size: 2.5em;
+  color: #cf2c2c;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px #000000;
+}
+
+/* Estilo do título e do parágrafo no modo noite */
+body.modo-noite header h1,
+body.modo-noite header p {
+  text-shadow: 2px 2px 10px rgba(128, 44, 44, 0.8); /* Brilho suave no título */
+}
+
+/* Alteração nas seções para o modo noite */
+body.modo-noite section {
+  background-color: #251f1f; /* Fundo escuro para as seções */
+  color: #a73243; /* Texto suave e romântico */
+  box-shadow: 0 0 15px rgba(255, 102, 178, 0.3);
+}
+
+/* Ajuste nas imagens para o modo noite */
+body.modo-noite .galeria img {
+  border: 2px solid #7c2e55; /* Contorno suave para as imagens */
+  filter: brightness(80%); /* Diminui o brilho das imagens */
+  
+}
+
+/* Ajuste no botão */
+body.modo-noite button {
+  background-color: #7a2626;
+  color: #fff;
+  box-shadow: 0 0 15px #000000;
+}
