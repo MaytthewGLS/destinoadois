@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Destinoadois.sex</title>
   <link rel="stylesheet" href="stylefofo.css">
+  <link rel="stylesheet" href="disespecial.css">
 </head>
 <body>
 
@@ -19,6 +20,54 @@
       </ul>
     </nav>
   </header>
+
+  <section id="linha-do-tempo">
+  <h2>🌸 Nossa Linha do Tempo</h2>
+  <div class="evento">
+    <h3>💖 12/06/2024 – Nosso Primeiro Encontro</h3>
+    <p>O começo de tudo... o frio na barriga, os sorrisos tímidos e o brilho nos olhos.</p>
+  </div>
+</section>
+
+<section id="playlist-do-amor">
+  <h3>🎶 Nossa Playlist do Amor</h3>
+  <p>As músicas que embalam nossa história 💕</p>
+  <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/03OWQNqHrUilSbmHENgmIq?utm_source=generator&theme=0" 
+        width="100%" 
+        height="352" 
+        frameBorder="0" 
+        allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy"></iframe>
+</section>
+
+<section id="promessas">
+  <h3>🌹 Promessas de Amor</h3>
+  <p>Escreva uma promessa fofa para o seu amor 💖</p>
+
+  <form id="form-promessa" onsubmit="adicionarPromessa(event)">
+    <input type="text" id="input-promessa" placeholder="Ex: Prometo sempre te dar o último pedaço de pizza 🍕" required>
+    <button type="submit">💌 Prometer</button>
+  </form>
+
+  <ul id="lista-promessas"></ul>
+</section>
+
+
+<section id="cartinhas">
+  <h2>💌 Nossas Cartinhas de Amor</h2>
+
+  <div class="cartinha" onclick="abrirCartinha(this)">
+    <div class="frente">❤️ Clique para ler</div>
+    <div class="verso">Você é meu mundo. Te amo mais a cada dia! 🌎❤️</div>
+  </div>
+
+  <div class="cartinha" onclick="abrirCartinha(this)">
+    <div class="frente">💖 Carta para você</div>
+    <div class="verso">Mesmo nos dias nublados, você é o meu raio de sol. ☀️</div>
+  </div>
+</section>
 
   <button onclick="mostrarSurpresa()">✨ Surpresa do Dia</button>
   <p id="surpresa"></p>

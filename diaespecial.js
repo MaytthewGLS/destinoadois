@@ -22,6 +22,26 @@ const surpresas = [
   "Restaurante chinês 🥡"
 ];
 
+function abrirCartinha(cartinha) {
+  cartinha.classList.toggle("virada");
+}
+
+function adicionarPromessa(event) {
+  event.preventDefault();
+
+  const input = document.getElementById('input-promessa');
+  const texto = input.value.trim();
+
+  if (texto !== "") {
+    const lista = document.getElementById('lista-promessas');
+    const novaPromessa = document.createElement('li');
+    novaPromessa.textContent = texto;
+    lista.appendChild(novaPromessa);
+    input.value = ""; // limpa o campo
+  }
+}
+
+
 function mostrarSurpresa() {
   const index = Math.floor(Math.random() * surpresas.length);
   const texto = surpresas[index];

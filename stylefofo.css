@@ -4,6 +4,112 @@
   box-sizing: border-box;
 }
 
+#promessas h2 {
+  color: #ff69b4;
+  margin-bottom: 0.5rem;
+}
+
+#form-promessa {
+  margin: 1rem 0;
+}
+
+#input-promessa {
+  padding: 0.5rem;
+  width: 70%;
+  border: 2px solid #ffc0cb;
+  border-radius: 10px;
+}
+
+#form-promessa button {
+  padding: 0.5rem 1rem;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+#lista-promessas {
+  list-style-type: "💞 ";
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+
+#lista-promessas li {
+  background-color: #ffe6f0;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 80%;
+  text-align: left;
+}
+
+#playlist-do-amor h2 {
+  font-size: 1.8rem;
+  color: #ff69b4;
+  margin-bottom: 0.5rem;
+}
+
+#playlist-do-amor p {
+  color: #c71585;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+#cartinhas {
+  text-align: center;
+  padding: 2rem;
+}
+
+#cartinhas h2 {
+  color: #ff69b4;
+  margin-bottom: 1rem;
+}
+
+.cartinha {
+  width: 250px;
+  height: 150px;
+  margin: 1rem auto;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.cartinha .frente,
+.cartinha .verso {
+  width: 100%;
+  height: 100%;
+  background-color: #ffe0f0;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  padding: 1rem;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.8s;
+}
+
+.cartinha .frente {
+  background-color: #ffcce5;
+}
+
+.cartinha .verso {
+  background-color: #fff0f5;
+  transform: rotateY(180deg);
+}
+
+.cartinha.virada .frente {
+  transform: rotateY(180deg);
+}
+
+.cartinha.virada .verso {
+  transform: rotateY(0);
+}
+
+
 body {
   cursor: src('pictures/Fotos\ polaroid/.coracao') 16 16, auto;
   font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -206,7 +312,7 @@ body.modo-noite coracao-wrapper {
   position: relative;
 }
 
-/* Animação para dar efeito de flutuação */
+
 @keyframes flutuar {
   0% {
     transform: translateY(0);

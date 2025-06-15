@@ -48,6 +48,18 @@ function alternarModo() {
 }
 
 
+function atualizarContagem() {
+    const dataInicioStr = document.getElementById("data").innerText;
+    const partes = dataInicioStr.split("/");
+    const dataInicio = new Date(partes[2], partes[1] - 1, partes[0]);
+
+    const hoje = new Date();
+    const diffEmMs = hoje - dataInicio;
+    const diffEmDias = Math.floor(diffEmMs / (1000 * 60 * 60 * 24));
+
+    document.getElementById("contador").innerText = diffEmDias;
+  }
+
   function baixarCarta() {
     const conteudo = document.getElementById("carta").value;
 
