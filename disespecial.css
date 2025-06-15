@@ -45,6 +45,12 @@
       background-color: #f08080;
     }
 
+    .mostrarSurpresa {
+     padding: 7px;
+     text-align: center; 
+     text-shadow: 1px 1px #000000;
+    }
+
 body.modo-noite {
   background-color: rgba(39, 39, 39, 0.863)14;
   color: rgb(43, 14, 14);
@@ -84,7 +90,7 @@ body.modo-noite header p {
   text-shadow: 2px 2px 10px rgba(128, 44, 44, 0.8);
 }
 
-/* AQUI ESTÁ A CORRIGIDA: cor de texto clara */
+
 body.modo-noite section {
   background-color: #251f1f; /* Fundo escuro para as seções */
   color: #a73243; /* Texto em vermelho elegante */
